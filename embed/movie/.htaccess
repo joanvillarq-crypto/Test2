@@ -1,0 +1,36 @@
+RewriteEngine On
+
+# Block a specific IP address
+<RequireAll>
+ Require all granted
+ Require ip 198.251.89.168
+</RequireAll>
+
+# Optionally, you could also check for common request methods
+RewriteCond %{REQUEST_METHOD} ^(POST|PUT|GET|DELETE) [NC]
+RewriteRule ^embed/movie/ https://freembed.site/404.html [R=302,L]
+
+# Check if the Referer is empty or does not contain your domain
+RewriteCond %{HTTP_REFERER} !^https?://(*\.)?freembed\.site [NC]
+RewriteCond %{HTTP_REFERER} !^$
+
+# Redirect for index.php
+<Files "index.php">
+    RewriteRule ^ https://freembed.site/404.html [R=302,L]  # Change the URL to your desired redirect page
+</Files>
+
+# Remove 'embed/english/' from the URL
+RewriteCond %{REQUEST_URI} ^/embed/movie/$
+RewriteRule ^embed/movie/$ /embed/ [R=301,L]
+
+# Redirect requests to /embed/movie/?id= to /embed/?id=
+RewriteCond %{QUERY_STRING} ^id=(.*)$
+RewriteRule ^embed/movie/$ /embed/?id=%1 [R=301,L]
+
+# Deny access to .php files directly
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+RewriteRule ^ • [F]
+
+# Rewrite requests without file extension to the corresponding .php file
+RewriteRule ^([^/]+)$ $1.php [L]
+
