@@ -1,0 +1,14 @@
+{
+    "name": "FREEMBED",
+    "short_name": "FREEMBED",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "32x32",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#8B5CF6",
+    "background_color": "#050810",
+    "display": "standalone"
+} 

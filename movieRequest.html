@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Movie Search</title>
+<style>
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    z-index: 20;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.result-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .progress-container {
+            width: 70%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 20px;
+            height: 25px;
+            display: none; /* Hidden initially */
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0%;
+            border-radius: 5px;
+            transition: width 0.4s ease;
+        }
+        .progress-text {
+            text-align: center;
+            color: #fff;
+            line-height: 25px; /* Center text vertically */
+        }
+        .progress-container::after {
+            content: 'Please wait. we are using rapid upload..';
+            text-align: center;
+            color: gray;
+            font-size: 0.7em;
+            font-weight: 600;
+            font-familty: Sansirif;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h3>MOVIE TMDB ID RAPID UPLOAD.</h3>
+        <h6>If ever the movie is not on our movie list. you can use of our rapid upload using only the tmdb id. take note that the langauge can't change in to default english.</h6>
+<form id='fetchForm' action='movieRequest.php' method='GET' onsubmit='startFetching(event)'>
+        <input type='text' id='id' name='id' placeholder='type: TMDB ID'>
+        <button type='submit'>Add Movie</button>
+        <div id='message' class='message'></div>
+    </div>
+<div class='progress-container' id='progress-container' style='position:fixed;top:50%;left:5%;width:90%;z-index:30;'>
+        <div class='progress-bar' id='progress-bar'>
+            <div class='progress-text' id='progress-text'>0%</div>
+        </div>
+    </div>
+    <script>
+        // Display success or error messages based on the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const messageElement = document.getElementById('message');
+        const progressContainer = document.getElementById('progress-container');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+
+        if (urlParams.has('success')) {
+            messageElement.textContent = 'Movie details added and saved successfully!';
+            messageElement.classList.add('success');
+        } else if (urlParams.has('error')) {
+            messageElement.textContent = 'Error: ' + urlParams.get('error');
+            messageElement.classList.add('error');
+        }
+
+        function startFetching(event) {
+            event.preventDefault(); // Prevent the default form submission
+            progressContainer.style.display = 'block'; // Show the progress bar
+            let progress = 0;
+
+            // Simulate fetching process
+            const interval = setInterval(() => {
+                progress += 10; // Increase progress
+                if (progress > 100) {
+                    clearInterval(interval);
+                    // Redirect after fetching
+                    document.getElementById('fetchForm').submit();
+                } else {
+                    progressBar.style.width = progress + '%';
+                    progressText.textContent = progress + '%';
+                }
+            }, 500); // Update every 500ms (adjust as necessary)
+        }
+    </script>
+</body>
+</html>

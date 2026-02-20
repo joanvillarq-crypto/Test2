@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^index\.html$ index.php [L,R=301]
+
+# Allow access to your own domain (e.g., yoursite.com) and redirect everything else
+RewriteCond %{HTTP_HOST} !^(www\.)?freembed\.site$ [NC]
+RewriteRule ^ /blocked.html [R=302,L]  # Redirect to blocked.html
+
+<Directory "/embed/tv">
+    AllowOverride None
+    Options -ExecCGI
+    AddHandler cgi-script .pl .py .php .json
+</Directory>

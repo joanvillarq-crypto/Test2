@@ -1,0 +1,124 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Movie URL Fetcher with Cache</title>
+</head>
+<body>
+<h2>Fetch Movie Info and m3u8 Link</h2>
+<form id="movieForm">
+  Movie ID: <input type="text" id="movieId" required />
+  Logo URL: <input type="text" id="logoUrl" placeholder="Default logo" />
+  <button type="submit">Fetch</button>
+</form>
+<pre id="output"></pre>
+
+<script>
+// Your TMDb API key
+const API_KEY = '8baba8ab6b8bbe247645bcae7df63d0d';
+
+document.getElementById('movieForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const movieId = document.getElementById('movieId').value.trim();
+  const logoUrlInput = document.getElementById('logoUrl').value.trim();
+
+  const tmdbUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
+
+  // Fetch movie details from TMDb
+  let tmdbData;
+  try {
+    const res = await fetch(tmdbUrl);
+    tmdbData = await res.json();
+  } catch (err) {
+    display('Error fetching TMDb data: ' + err);
+    return;
+  }
+
+  if (tmdbData.status_code) {
+    display('Movie not found on TMDb.');
+    return;
+  }
+
+  // Check cache / local storage first, then fetch source URLs
+  const m3u8Url = await getM3U8Url(movieId, tmdbData);
+
+  if (m3u8Url) {
+    // Save cache info
+    saveM3U8Cache(movieId, tmdbData, m3u8Url);
+    const encodedUrl = btoa(m3u8Url);
+    display(`Encoded URL: ${encodedUrl}`);
+  } else {
+    display('m3u8 link not found.');
+  }
+});
+
+// Function: Check cache first, then fetch source URLs if not cached
+async function getM3U8Url(tmdb_id, tmdb_data) {
+  const cacheKey = 'm3u8_' + tmdb_id;
+  const cachedDataStr = localStorage.getItem(cacheKey);
+  console.log('Checking cache for key:', cacheKey);
+  console.log('Cached data string:', cachedDataStr);
+
+  if (cachedDataStr) {
+    try {
+      const cachedData = JSON.parse(cachedDataStr);
+      console.log('Found cached data:', cachedData);
+      if (cachedData && cachedData.m3u8_url) {
+        console.log('Using cached m3u8 URL:', cachedData.m3u8_url);
+        return cachedData.m3u8_url;
+      }
+    } catch (e) {
+      console.error('Error parsing cached data:', e);
+    }
+  }
+
+  // Not cached or invalid cache, fetch from source URLs
+  const sourceUrls = [
+    `https://freembed.site/resource/server/mega_movie_server.php?id=${tmdb_id}`,
+    `https://autoembed.cc/embed/player.php?id=${tmdb_id}&lang=english`,
+    `https://autoembed.cc/embed/mlplayer.php?id=${tmdb_id}&lang=english`,
+    `https://viet.autoembbbed.cc/movie/${tmdb_id}`
+  ];
+
+  for (const url of sourceUrls) {
+    try {
+      console.log('Trying source URL:', url);
+      const response = await fetch(url);
+      const text = await response.text();
+      const match = text.match(/https:\/\/[^\s]*\.m3u8/);
+      if (match && match[0]) {
+        console.log('Found m3u8 link:', match[0]);
+        return match[0]; // Return the first found
+      }
+    } catch (_) {
+      console.log('Error fetching or parsing URL:', url);
+    }
+  }
+
+  console.log('No m3u8 link found in source URLs.');
+  return null;
+}
+
+// Function: Save cache info in localStorage (simulate m3u8.json)
+function saveM3U8Cache(tmdb_id, tmdb_data, m3u8_url) {
+  const cacheKey = 'm3u8_' + tmdb_id;
+  const title = tmdb_data.title || 'Unknown Title';
+  const poster = `https://image.tmdb.org/t/p/w500${tmdb_data.poster_path || ''}`;
+
+  const data = {
+    tmdb_id,
+    title,
+    poster,
+    m3u8_url
+  };
+
+  localStorage.setItem(cacheKey, JSON.stringify(data));
+  console.log('Cache saved:', data);
+}
+
+function display(msg) {
+  document.getElementById('output').textContent = msg;
+}
+</script>
+</body>
+</html>
