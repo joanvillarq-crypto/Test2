@@ -1,0 +1,103 @@
+[
+    {
+        "tmdb_id": 211684,
+        "title": "The Walking Dead: Daryl Dixon",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/kdM24KINoAVK9wjCtDJCkdffEpc.jpg",
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_poster": "https:\/\/image.tmdb.org\/t\/p\/w1280",
+                "episodes": []
+            },
+            {
+                "season_number": 1,
+                "season_poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/t5FVNwDq0oQ1PvVd6EA9hrY3YFV.jpg",
+                "episodes": [
+                    {
+                        "episode_number": 1,
+                        "episode_name": "L me Perdue",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/LwwtDztgFgvfUYRfa2P16ODH0IhAv~5JYChvHde9yyF4ciTpibs0KZywcEMdqXSkOSHZqDpH25ZrvM6bsigdIYdp5lLLS~3QPeDY7J3xhphJlYdp5QEcwYXlEHDz1gom~pdq0UMpUh0YS5wiZNjsRJY3N01XWCzoamFggYS~9JI=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/3oebI0Euvz8C4IPMAu346RcV2Gh.jpg"
+                    },
+                    {
+                        "episode_number": 2,
+                        "episode_name": "Alouette",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/BNrHvkAamDT~mGForO2iwrynkjgp8e9HvCbmdSucR6oNXe~lYGbxEPvNr6q2thMqZbcnWwarYlO4kOIdcB9H5fE9oAgN3gt3IaJvviONXGZkYB019Q0ij8gLzTEEvlt6Nm9GrOU22l8fQdTnafyme801RIawEsPWshfTO77lDLQ=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/gCTcN8Wl9Pn3BuU6sJX2fqdxomb.jpg"
+                    },
+                    {
+                        "episode_number": 3,
+                        "episode_name": "Paris sera toujours Paris",
+                        "m3u8_link": "https://lightningbolt21.live/file2/BASgu9e3O4UOkil7srLn3xNoPOqJ0HLJnQcwjGdTY9nyQzKJdwglfaXkYEaZbe5uh+Rh8Egh9HErawJwDL0DZ8nhl9wupBn9MtU26NIMIB4hXC4fqQk6z0FU~7IAyPZcRJfaSHtdDfEZifn9liCAj5kiw43fhWmityER9tRewEQ=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/wSdflUF8nlcgDb6WFXRd1R7tPTC.jpg"
+                    },
+                    {
+                        "episode_number": 4,
+                        "episode_name": "La Dame de Fer",
+                        "m3u8_link": "https://lightningbolt21.live/file2/8BAHJD7ANx7qgGEQZIl77IV4ociZc3LyBh0zClZaGBIyoSbq85r~J6Oskp61EywzxdxDlEohxpKs7JxaKuoqwx+wmRMHGAf2qfQC0a8g25loSxwEsXFGBzkH4lRWzccbcNxbo~IrUnUFsEDJkV9hR5o+9GiuzN+G0kCnqFC~mHA=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/l7Xj2excN8Ffx31qt3KTa68KKot.jpg"
+                    },
+                    {
+                        "episode_number": 5,
+                        "episode_name": "Deux Amours",
+                        "m3u8_link": "https://mistydawn62.pro/file2/s7PxVI9hQ5zfoFTMknhsxo4oDlnK01F8dWiu~cxNWC3eECRfehni9zgdLhpNKQ~HoHeihEFeWVcHAqehhNU3SMV8ShJqKisSCiTyqZCLlYxGmyFH9hr5ZbyEp1eKGTkESemHeXNwcvBHhDh~TgjxSLOjIs181xrmRpl4Qfsdofw=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/m2aML9HzHvm8Q9dWLAFtzIUQKqN.jpg"
+                    },
+                    {
+                        "episode_number": 6,
+                        "episode_name": "Coming Home",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/sZanQth6Hv+41jmBGONRYeYcNCY+JuSBfuFtXdjwJtLwZn~kidfhPiS66Se8Rk4TTALUhL8gjhArNWodA4oz+eB0PWzp0x37BtqwY2Zs20HcZ6G2Rhyvj+amDUn3VAjuQNyAllpieRI2olyOHqjZRk3tpTduIzbRuFXg586e5Vk=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/bLN5MVuEqIX6KHeGKfr454zlUZx.jpg"
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/lV9EtL0tuwX9EkIvgIQN5J09ZIs.jpg",
+                "episodes": [
+                    {
+                        "episode_number": 1,
+                        "episode_name": "The Book of Carol: La gentillesse des \u00e9trangers",
+                        "m3u8_link": "https://frostywinds73.pro/file2/OkvG8CnJJjbkujEUDgHa3oMJaPcjrIoyurvVZUuZOZx4DtWBgAZshb96ZtmQIgMM7KpSt1QXSZAVh884yZhsP+JZYr5m3rOjqyR20xxM1QKuYSMNIwD~JP+0rF1H~cfCTIrgcLApqg0PHW5Y1QgCa0O~eSsyEyK4EKBJBUjh6Js=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/8uPNiwUI1jQ5KFyqlvrRFGtK16y.jpg"
+                    },
+                    {
+                        "episode_number": 2,
+                        "episode_name": "The Book of Carol: Moulin Rouge",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/scU3e81OYCrTtOf~Dtfvd~OST0E87iP0dY7z1~niadWJA3WolCGxq21XC1+XDq2IrrhVaS066HKS5dEAmiqT8ja1tjgOf2deJLcjPLzk6mH~~2eNYsoVoarqs6qFpkM1NiECgbKV0CwPCbYUtEHXulbaCtmI2zkD2VMqwEqaUeo=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/nGADuNLfyZrmVjvq26dz3tzTO6O.jpg"
+                    },
+                    {
+                        "episode_number": 3,
+                        "episode_name": "The Book of Carol: L'invisible",
+                        "m3u8_link": "https://sunnybreeze16.live/file2/doeKIv1daFeXGbTG1rsOXpRP3~lDe0aSamXzxtgzr9lBZ1EABo~SYrhpw+wNc78DXkVeS85~vZk6uTAdsv~q4rSTqNvX4Ku1DsKF+Zd2blbqkbUkSDKVB5PgqDqa9vvV2Im+lG67+GyrBIUcM+YcRn~d1hS8oS0ksBJN~Ky0z2k=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/hYunGgbQTr6qiKMtdUesDXJugkJ.jpg"
+                    },
+                    {
+                        "episode_number": 4,
+                        "episode_name": "The Book of Carol: Le Paradis Pour Toi",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/RWEUM71qNeaHVQFanjUu0A~Obetj0V0ToM16cHH0z2ydyZJX07y~S6xxU1sqGtYuino9GecwzeUzj3J86fGyyWiLh0M7oJyuHOIuzcGZT~uVbdloyMWFVfulvm58PtnyUKeleTIREj88l~KB~MGEqz7mRUUlPpSSsAnC3GQzew8=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/g8KjZKjAIGSXzTLsqIzXDUkYW03.jpg"
+                    },
+                    {
+                        "episode_number": 5,
+                        "episode_name": "The Book of Carol Vouloir C est Pouvoir",
+                        "m3u8_link": "https://stormyclouds42.xyz/file2/Ovx8qHLhQvVrc+ug89J+~pV8dtE~u1FwiIBC01~aY4Fm105cZmhr~lH2nW4qmtynyWREQ0tyvpTxdkznhZBXqQQVybAqUhSpc2Iz8lbm76VHq1A47yE8IMHfzLUB8zDeUkQYbtg3Q8mfQSyB97IGI~1k8eV7+pJbXWvB2H0n2UY=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/1gvAGCpqd1TbnTXzg1JmxaEqfwB.jpg"
+                    },
+                    {
+                        "episode_number": 6,
+                        "episode_name": "The Book of Carol: Au Revoir Les Enfants",
+                        "m3u8_link": "https://gentlebreeze85.xyz/file2/HiKJ+lo8rbITbr8tjx436RGOHo9pN~CPcZXdbIjV9vnyMSydNMJ+x7pn7hiQulP8znZmrM6ky6pv7XV+4SOR3+TMQQ2JTRJbusELrl6CRd7jQQ4HMjvoscQ5hPnKC6sh4MUjDPJ7ocp48ZBhbhsj7wtEUXaIydGuXLUkprefvp0=/cGxheWxpc3QubTN1OA==.m3u8",
+                        "poster": "https:\/\/image.tmdb.org\/t\/p\/w1280\/rYOaipDEt4mpgQdzcAiqihk10ET.jpg"
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_poster": "https:\/\/image.tmdb.org\/t\/p\/w1280",
+                "episodes": []
+            }
+        ]
+    }
+]
